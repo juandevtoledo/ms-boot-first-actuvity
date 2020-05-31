@@ -1,0 +1,86 @@
+[2020-05-30 12:36:29:353] [clients-service,,,,] [INFO] -  - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.devjuantoledo.employeservice.EmployeServiceApplicationTests], using SpringBootContextLoader
+[2020-05-30 12:36:29:371] [clients-service,,,,] [INFO] -  - Could not detect default resource locations for test class [com.devjuantoledo.employeservice.EmployeServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2020-05-30 12:36:29:372] [clients-service,,,,] [INFO] -  - Could not detect default configuration classes for test class [com.devjuantoledo.employeservice.EmployeServiceApplicationTests]: EmployeServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2020-05-30 12:36:29:583] [clients-service,,,,] [INFO] -  - Found @SpringBootConfiguration com.devjuantoledo.employeservice.EmployeServiceApplication for test class com.devjuantoledo.employeservice.EmployeServiceApplicationTests
+[2020-05-30 12:36:29:830] [clients-service,,,,] [INFO] -  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2020-05-30 12:36:29:864] [clients-service,,,,] [INFO] -  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69932948, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f5e1b9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@377cbe64, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d37b9ac, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d9e102b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@144fd608, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4692d57b, org.springframework.test.context.event.EventPublishingTestExecutionListener@3618eedc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b4aaf7c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@115fd98b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4136efd6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@30298722, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1eb6ff14]
+[2020-05-30 12:36:33:173] [clients-service,,,,] [INFO] -  - Multiple Config Server Urls found listed.
+[2020-05-30 12:36:33:174] [clients-service,,,,] [INFO] -  - Fetching config from server at : http://config-service-primary:8081
+[2020-05-30 12:36:34:524] [clients-service,,,,] [INFO] -  - Located environment: name=employe-service, profiles=[default], label=null, version=f5742e5c987ce91396c97b40c6d3b8a938d392d8, state=null
+[2020-05-30 12:36:34:526] [clients-service,,,,] [INFO] -  - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/juandevtoledo/config_data_docker.git/config_data/employe-service.yml'}]
+[2020-05-30 12:36:34:635] [clients-service,,,,] [INFO] -  - No active profile set, falling back to default profiles: default
+[2020-05-30 12:36:35:951] [clients-service,,,,] [INFO] -  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2020-05-30 12:36:36:230] [clients-service,,,,] [INFO] -  - Finished Spring Data repository scanning in 266ms. Found 1 JPA repository interfaces.
+[2020-05-30 12:36:36:418] [clients-service,,,,] [WARN] -  - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[2020-05-30 12:36:36:867] [clients-service,,,,] [INFO] -  - BeanFactory id=08d07a39-4663-37f9-8fc4-8b6d20db9403
+[2020-05-30 12:36:38:265] [clients-service,,,,] [INFO] -  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-05-30 12:36:38:392] [clients-service,,,,] [INFO] -  - HHH000412: Hibernate ORM core version 5.4.12.Final
+[2020-05-30 12:36:38:639] [clients-service,,,,] [INFO] -  - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-05-30 12:36:38:837] [clients-service,,,,] [INFO] -  - HikariPool-1 - Starting...
+[2020-05-30 12:36:39:085] [clients-service,,,,] [INFO] -  - HikariPool-1 - Start completed.
+[2020-05-30 12:36:39:113] [clients-service,,,,] [INFO] -  - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2020-05-30 12:36:40:322] [clients-service,,,,] [INFO] -  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-05-30 12:36:40:333] [clients-service,,,,] [INFO] -  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2020-05-30 12:36:41:745] [clients-service,,,,] [WARN] -  - No URLs will be polled as dynamic configuration sources.
+[2020-05-30 12:36:41:746] [clients-service,,,,] [INFO] -  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2020-05-30 12:36:41:759] [clients-service,,,,] [WARN] -  - No URLs will be polled as dynamic configuration sources.
+[2020-05-30 12:36:41:760] [clients-service,,,,] [INFO] -  - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2020-05-30 12:36:42:031] [clients-service,,,,] [WARN] -  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2020-05-30 12:36:43:010] [clients-service,,,,] [INFO] -  - Initializing ExecutorService 'applicationTaskExecutor'
+[2020-05-30 12:36:47:307] [clients-service,,,,] [INFO] -  - Initializing ExecutorService
+[2020-05-30 12:36:47:652] [clients-service,,,,] [INFO] -  - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:customerDB'
+[2020-05-30 12:36:49:508] [clients-service,,,,] [WARN] -  - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+[2020-05-30 12:36:50:995] [clients-service,,,,] [INFO] -  - Exposing 18 endpoint(s) beneath base path '/actuator'
+[2020-05-30 12:36:51:121] [clients-service,,,,] [INFO] -  - Setting initial instance status as: STARTING
+[2020-05-30 12:36:51:201] [clients-service,,,,] [INFO] -  - Initializing Eureka in region us-east-1
+[2020-05-30 12:36:51:291] [clients-service,,,,] [INFO] -  - Using JSON encoding codec LegacyJacksonJson
+[2020-05-30 12:36:51:292] [clients-service,,,,] [INFO] -  - Using JSON decoding codec LegacyJacksonJson
+[2020-05-30 12:36:51:523] [clients-service,,,,] [INFO] -  - Using XML encoding codec XStreamXml
+[2020-05-30 12:36:51:524] [clients-service,,,,] [INFO] -  - Using XML decoding codec XStreamXml
+[2020-05-30 12:36:51:852] [clients-service,,,,] [INFO] -  - Resolving eureka endpoints via configuration
+[2020-05-30 12:36:52:737] [clients-service,,,,] [INFO] -  - Disable delta property : false
+[2020-05-30 12:36:52:737] [clients-service,,,,] [INFO] -  - Single vip registry refresh property : null
+[2020-05-30 12:36:52:738] [clients-service,,,,] [INFO] -  - Force full registry fetch : false
+[2020-05-30 12:36:52:738] [clients-service,,,,] [INFO] -  - Application is null : false
+[2020-05-30 12:36:52:738] [clients-service,,,,] [INFO] -  - Registered Applications size is zero : true
+[2020-05-30 12:36:52:739] [clients-service,,,,] [INFO] -  - Application version is -1: true
+[2020-05-30 12:36:52:739] [clients-service,,,,] [INFO] -  - Getting all instance registry info from the eureka server
+[2020-05-30 12:36:52:877] [clients-service,,,,] [INFO] -  - The response status is 200
+[2020-05-30 12:36:52:879] [clients-service,,,,] [INFO] -  - Starting heartbeat executor: renew interval is: 30
+[2020-05-30 12:36:52:883] [clients-service,,,,] [INFO] -  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2020-05-30 12:36:52:888] [clients-service,,,,] [INFO] -  - Discovery Client initialized at timestamp 1590860212886 with initial instances count: 0
+[2020-05-30 12:36:52:901] [clients-service,,,,] [INFO] -  - Registering application EMPLOYE-SERVICE with eureka with status UP
+[2020-05-30 12:36:52:902] [clients-service,,,,] [INFO] -  - Saw local status change event StatusChangeEvent [timestamp=1590860212902, current=UP, previous=STARTING]
+[2020-05-30 12:36:52:906] [clients-service,,,,] [INFO] -  - DiscoveryClient_EMPLOYE-SERVICE/host.docker.internal:employe-service:8291: registering service...
+[2020-05-30 12:36:52:936] [clients-service,,,,] [INFO] -  - Started EmployeServiceApplicationTests in 22.998 seconds (JVM running for 27.411)
+[2020-05-30 12:36:52:950] [clients-service,,,,] [ERROR] -  - Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58) ~[spring-boot-admin-client-2.2.1.jar:2.2.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_221]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+[2020-05-30 12:36:52:984] [clients-service,,,,] [INFO] -  - DiscoveryClient_EMPLOYE-SERVICE/host.docker.internal:employe-service:8291 - registration status: 204
+[2020-05-30 12:36:53:100] [clients-service,,,,] [INFO] -  - Unregistering application EMPLOYE-SERVICE with eureka with status DOWN
+[2020-05-30 12:36:53:101] [clients-service,,,,] [WARN] -  - Saw local status change event StatusChangeEvent [timestamp=1590860213101, current=DOWN, previous=UP]
+[2020-05-30 12:36:53:102] [clients-service,,,,] [INFO] -  - DiscoveryClient_EMPLOYE-SERVICE/host.docker.internal:employe-service:8291: registering service...
+[2020-05-30 12:36:53:108] [clients-service,,,,] [INFO] -  - Shutting down ExecutorService
+[2020-05-30 12:36:53:110] [clients-service,,,,] [INFO] -  - Shutting down ExecutorService 'applicationTaskExecutor'
+[2020-05-30 12:36:53:119] [clients-service,,,,] [INFO] -  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2020-05-30 12:36:53:123] [clients-service,,,,] [INFO] -  - HikariPool-1 - Shutdown initiated...
+[2020-05-30 12:36:53:130] [clients-service,,,,] [INFO] -  - HikariPool-1 - Shutdown completed.
+[2020-05-30 12:36:53:130] [clients-service,,,,] [INFO] -  - DiscoveryClient_EMPLOYE-SERVICE/host.docker.internal:employe-service:8291 - registration status: 204
+[2020-05-30 12:36:53:131] [clients-service,,,,] [INFO] -  - Shutting down DiscoveryClient ...
+[2020-05-30 12:36:56:135] [clients-service,,,,] [INFO] -  - Unregistering ...
+[2020-05-30 12:36:56:145] [clients-service,,,,] [INFO] -  - DiscoveryClient_EMPLOYE-SERVICE/host.docker.internal:employe-service:8291 - deregister  status: 200
+[2020-05-30 12:36:56:154] [clients-service,,,,] [INFO] -  - Completed shut down of DiscoveryClient

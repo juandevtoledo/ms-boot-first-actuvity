@@ -1,0 +1,53 @@
+version: "3.7"
+services:
+  registry-service-primary:
+    image: registry.juandevtoledo:5001/registry-service:1.0.0
+    container_name: registry-service-primary
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - SPRING_PROFILES_ACTIVE=primary
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8083"]
+      interval: 90s
+      timeout: 10s
+      retries: 2
+    ports:
+      - 8083:8083
+    networks:
+      - onlinestore
+#  registry-service-secondary:
+#    image: registry.juandevtoledo:5001/registry-service:1.0.0
+#    container_name: registry-service-secondary
+#    environment:
+#      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#      - SPRING_PROFILES_ACTIVE=secondary
+#    restart: on-failure
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:8084"]
+#      interval: 90s
+#      timeout: 10s
+#      retries: 2
+#    ports:
+#      - 8084:8084
+#    networks:
+#      - onlinestore
+#  registry-service-tertiary:
+#    image: registry.juandevtoledo:5001/registry-service:1.0.0
+#    container_name: registry-service-tertiary
+#    environment:
+#      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#      - SPRING_PROFILES_ACTIVE=tertiary
+#    restart: on-failure
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:8085"]
+#      interval: 90s
+#      timeout: 10s
+#      retries: 2
+#    ports:
+#    - 8085:8085
+#    networks:
+#      - onlinestore
+networks:
+    onlinestore:
+        external: true

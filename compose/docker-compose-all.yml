@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  config-service-primary:
+    image: registry.juandevtoledo:5001/config-service:1.0.0
+    container_name: config-service-primary
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - GIT_USER=$GIT_USER
+      - GIT_PASSWORD=$GIT_PASSWORD
+      - SPRING_PROFILES_ACTIVE=primary
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://root:s3cr3t@localhost:8081/registry-service/primary"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 8081:8081
+    networks:
+      - onlinestore
+  admin-service:
+    image: registry.juandevtoledo:5001/admin-service:1.0.0
+    container_name: admin-service
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 8086:8086
+    networks:
+      - onlinestore  
+networks:
+    onlinestore:
+        external: true

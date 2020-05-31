@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    config:
+      uri: http://config-service-primary:8081,http://config-service-secondary:8082
+      username: root
+      password: s3cr3t

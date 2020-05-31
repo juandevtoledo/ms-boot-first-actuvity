@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+    customer-service:
+        image: registry.juandevtoledo:5001/customer-service:1.0.0
+        environment:
+        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        networks:
+        - onlinestore
+    product-service:
+        image: registry.juandevtoledo:5001/product-service:1.0.0
+        environment:
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        networks:
+            - onlinestore
+    employe-service:
+        image: registry.juandevtoledo:5001/employe-serviceclient:1.0.0
+        environment:
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        networks:
+            - onlinestore
+  #  security-service:
+  #      image: registry.juandevtoledo:5001/security-service:1.0.0
+  #      environment:
+  #          - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #      networks:
+  #      - onlinestore
+    gateway-service:
+        image: registry.juandevtoledo:5001/gateway-service:1.0.0
+        container_name: gateway-service
+        environment:
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        networks:
+        - onlinestore
+        ports:
+            - "8080:8080"
+networks:
+    onlinestore:
+        external: true

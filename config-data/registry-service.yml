@@ -1,0 +1,85 @@
+profiles: default
+server:
+  port: 8099
+  # Number of acceptor threads to use.
+  jetty:
+    # Number of acceptor threads to use.
+    acceptors: 10
+    # Number of selector threads to use.
+    selectors: 15
+    # Maximum size in bytes of the HTTP post or put content.
+    max-http-post-size: 2000000
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+---
+spring:
+    profiles: primary
+server:
+    port: 8083
+    # Number of acceptor threads to use.
+    jetty:
+    # Number of acceptor threads to use.
+    acceptors: 10
+    # Number of selector threads to use.
+    selectors: 15
+    # Maximum size in bytes of the HTTP post or put content.
+    max-http-post-size: 2000000
+eureka:
+    instance:
+        hostname: registry-service-primary
+    appname: eureka-cluster
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://registry-service-secondary:8084/eureka/,http://registry-service-tertiary:8085/eureka/
+---
+spring:
+    profiles: secondary
+server:
+    port: 8084
+    # Number of acceptor threads to use.
+    jetty:
+    # Number of acceptor threads to use.
+    acceptors: 10
+    # Number of selector threads to use.
+    selectors: 15
+    # Maximum size in bytes of the HTTP post or put content.
+    max-http-post-size: 2000000
+eureka:
+    instance:
+        hostname: registry-service-secondary
+    appname: eureka-cluster
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://registry-service-primary:8083/eureka/,http://registry-service-tertiary:8085/eureka/
+---
+spring:
+    profiles: tertiary
+server:
+    port: 8085
+    # Number of acceptor threads to use.
+    jetty:
+    # Number of acceptor threads to use.
+    acceptors: 10
+    # Number of selector threads to use.
+    selectors: 15
+    # Maximum size in bytes of the HTTP post or put content.
+    max-http-post-size: 2000000
+eureka:
+    instance:
+        hostname: registry-service-tertiary
+    appname: eureka-cluster
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://registry-service-primary:8083/eureka/,http://registry-service-secondary:8084/eureka/
